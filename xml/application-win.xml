@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Windows (captive-runtime) retarget of assets/META-INF/AIR/application.xml.
+     Same app id + version + content SWF; desktop window instead of fullscreen portrait.
+     Fill ane-win/ with the Windows builds of each extension below before packaging. -->
+<application xmlns="http://ns.adobe.com/air/application/51.0">
+    <id>com.kakaogames.wdfp</id>
+    <versionNumber>0.0.81</versionNumber>
+    <filename>WorldFlipper</filename>
+    <name>World Flipper</name>
+    <extensions>
+        <extensionID>com.sesisoft.KakaoGameSdk</extensionID>
+        <extensionID>com.sesisoft.SingularSdk</extensionID>
+        <extensionID>com.sesisoft.PushService</extensionID>
+        <extensionID>com.distriqt.InAppBilling</extensionID>
+        <extensionID>com.distriqt.GameServices</extensionID>
+        <extensionID>com.distriqt.Battery</extensionID>
+        <extensionID>com.distriqt.Application</extensionID>
+        <extensionID>com.distriqt.Core</extensionID>
+        <extensionID>pinball.assetDownload</extensionID>
+        <extensionID>pinball.ane.getbuild</extensionID>
+        <extensionID>com.digitalstrawberry.ane.share</extensionID>
+        <extensionID>pinball.screen</extensionID>
+        <extensionID>pinball.checkapp</extensionID>
+        <extensionID>pinball.vibration</extensionID>
+        <extensionID>com.sesisoft.gxshield</extensionID>
+    </extensions>
+    <initialWindow>
+        <content>worldflipper_android_release.swf</content>
+        <visible>true</visible>
+        <width>540</width>
+        <height>960</height>
+        <minimizable>true</minimizable>
+        <!-- Overwritten by the builder (Builder.SetWindowSize): width/height come from the
+             Window size setting, and resizable/maximizable are enabled only when
+             code-patches/live-resize.as is part of the build - that patch listens for the
+             native RESIZE event and re-runs the game's relayout, so a resize or a maximize
+             follows the new size instead of leaving the boot layout in the corner. -->
+        <maximizable>false</maximizable>
+        <resizable>false</resizable>
+        <renderMode>direct</renderMode>
+        <depthAndStencil>true</depthAndStencil>
+    </initialWindow>
+    <supportedLanguages>ko en fr de es th</supportedLanguages>
+    <icon>
+        <image48x48>icons/icon-48.png</image48x48>
+        <image192x192>icons/icon-192.png</image192x192>
+    </icon>
+</application>
